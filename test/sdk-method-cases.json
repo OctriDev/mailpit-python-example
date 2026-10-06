@@ -1,0 +1,939 @@
+{
+  "cases": [
+    {
+      "id": "AppInformation:app_information",
+      "operationId": "AppInformation",
+      "methodName": "app_information",
+      "namespace": [
+        "application"
+      ],
+      "mode": "normal",
+      "owner": "application",
+      "arguments": {},
+      "argumentOrder": [],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Database": "Database",
+          "DatabaseSize": 1,
+          "LatestVersion": "LatestVersion",
+          "Messages": 30,
+          "RuntimeStats": {
+            "Memory": 1,
+            "MessagesDeleted": 30,
+            "SMTPAccepted": 1,
+            "SMTPAcceptedSize": 1,
+            "SMTPIgnored": 1,
+            "SMTPRejected": 1,
+            "Uptime": 1
+          },
+          "Tags": {
+            "key": 1
+          },
+          "Unread": 1,
+          "Version": "Version"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "AttachmentParams:attachment_params",
+      "operationId": "AttachmentParams",
+      "methodName": "attachment_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1",
+        "part_id": "Part-1"
+      },
+      "argumentOrder": [
+        "id",
+        "part_id"
+      ],
+      "response": {
+        "kind": "bytes",
+        "expected": null,
+        "byteLength": 12
+      }
+    },
+    {
+      "id": "DeleteMessagesParams:delete_messages_params",
+      "operationId": "DeleteMessagesParams",
+      "methodName": "delete_messages_params",
+      "namespace": [
+        "messages"
+      ],
+      "mode": "normal",
+      "owner": "messages",
+      "arguments": {
+        "ids": [
+          "4oRBnPtCXgAqZniRhzLNmS",
+          "hXayS6wnCgNnt6aFTvmOF6"
+        ]
+      },
+      "argumentOrder": [
+        "ids"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "DeleteSearchParams:delete_search_params",
+      "operationId": "DeleteSearchParams",
+      "methodName": "delete_search_params",
+      "namespace": [
+        "messages"
+      ],
+      "mode": "normal",
+      "owner": "messages",
+      "arguments": {
+        "query": "query",
+        "tz": "tz"
+      },
+      "argumentOrder": [
+        "query",
+        "tz"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "DeleteTagParams:delete_tag_params",
+      "operationId": "DeleteTagParams",
+      "methodName": "delete_tag_params",
+      "namespace": [
+        "tags"
+      ],
+      "mode": "normal",
+      "owner": "tags",
+      "arguments": {
+        "tag": "Tag"
+      },
+      "argumentOrder": [
+        "tag"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "DownloadRawParams:download_raw_params",
+      "operationId": "DownloadRawParams",
+      "methodName": "download_raw_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetAllTags:get_all_tags",
+      "operationId": "GetAllTags",
+      "methodName": "get_all_tags",
+      "namespace": [
+        "tags"
+      ],
+      "mode": "normal",
+      "owner": "tags",
+      "arguments": {},
+      "argumentOrder": [],
+      "response": {
+        "kind": "json",
+        "expected": [
+          "string"
+        ],
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getChaos:get_chaos",
+      "operationId": "getChaos",
+      "methodName": "get_chaos",
+      "namespace": [
+        "testing"
+      ],
+      "mode": "normal",
+      "owner": "testing",
+      "arguments": {},
+      "argumentOrder": [],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Authentication": {
+            "ErrorCode": 451,
+            "Probability": 5
+          },
+          "Recipient": {
+            "ErrorCode": 451,
+            "Probability": 5
+          },
+          "Sender": {
+            "ErrorCode": 451,
+            "Probability": 5
+          }
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetHeadersParams:get_headers_params",
+      "operationId": "GetHeadersParams",
+      "methodName": "get_headers_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "key": [
+            "key"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetMessageHTMLParams:get_message_html_params",
+      "operationId": "GetMessageHTMLParams",
+      "methodName": "get_message_html_params",
+      "namespace": [
+        "testing"
+      ],
+      "mode": "normal",
+      "owner": "testing",
+      "arguments": {
+        "id": "id-1",
+        "embed": "embed"
+      },
+      "argumentOrder": [
+        "id",
+        "embed"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetMessageParams:get_message_params",
+      "operationId": "GetMessageParams",
+      "methodName": "get_message_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Attachments": [
+            {
+              "Checksums": {
+                "MD5": "MD5",
+                "SHA1": "SHA1",
+                "SHA256": "SHA256"
+              },
+              "ContentID": "Content-1",
+              "ContentType": "ContentType",
+              "FileName": "Example Name",
+              "PartID": "Part-1",
+              "Size": 1
+            }
+          ],
+          "Bcc": [
+            {
+              "Address": "Address",
+              "Name": "Example Name"
+            }
+          ],
+          "Cc": [
+            {
+              "Address": "Address",
+              "Name": "Example Name"
+            }
+          ],
+          "Date": "2024-01-01T00:00:00Z",
+          "From": {
+            "Address": "Address",
+            "Name": "Example Name"
+          },
+          "HTML": "HTML",
+          "ID": "id-1",
+          "Inline": [
+            {
+              "Checksums": {
+                "MD5": "MD5",
+                "SHA1": "SHA1",
+                "SHA256": "SHA256"
+              },
+              "ContentID": "Content-1",
+              "ContentType": "ContentType",
+              "FileName": "Example Name",
+              "PartID": "Part-1",
+              "Size": 1
+            }
+          ],
+          "ListUnsubscribe": {
+            "Errors": "Errors",
+            "Header": "Header",
+            "HeaderPost": "HeaderPost",
+            "Links": [
+              "https://example.com"
+            ]
+          },
+          "MessageID": "Message-1",
+          "ReplyTo": [
+            {
+              "Address": "Address",
+              "Name": "Example Name"
+            }
+          ],
+          "ReturnPath": "ReturnPath",
+          "Size": 1,
+          "Subject": "Subject",
+          "Tags": [
+            "Tags"
+          ],
+          "Text": "Text",
+          "To": [
+            {
+              "Address": "Address",
+              "Name": "Example Name"
+            }
+          ],
+          "Username": "Example Name"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetMessagesParams:get_messages_params",
+      "operationId": "GetMessagesParams",
+      "methodName": "get_messages_params",
+      "namespace": [
+        "messages"
+      ],
+      "mode": "normal",
+      "owner": "messages",
+      "arguments": {
+        "start": 0,
+        "limit": 50
+      },
+      "argumentOrder": [
+        "start",
+        "limit"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "messages": [
+            {
+              "Attachments": 1,
+              "Bcc": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Cc": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Created": "2024-01-01T00:00:00Z",
+              "From": {
+                "Address": "Address",
+                "Name": "Example Name"
+              },
+              "ID": "id-1",
+              "MessageID": "Message-1",
+              "Read": false,
+              "ReplyTo": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Size": 1,
+              "Snippet": "Snippet",
+              "Subject": "Subject",
+              "Tags": [
+                "Tags"
+              ],
+              "To": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Username": "Example Name"
+            }
+          ],
+          "messages_count": 30,
+          "messages_unread": 30,
+          "start": 1,
+          "tags": [
+            "tags"
+          ],
+          "total": 100,
+          "unread": 1
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "GetMessageTextParams:get_message_text_params",
+      "operationId": "GetMessageTextParams",
+      "methodName": "get_message_text_params",
+      "namespace": [
+        "testing"
+      ],
+      "mode": "normal",
+      "owner": "testing",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "HTMLCheckParams:html_check_params",
+      "operationId": "HTMLCheckParams",
+      "methodName": "html_check_params",
+      "namespace": [
+        "other"
+      ],
+      "mode": "normal",
+      "owner": "other",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Platforms": {
+            "key": [
+              "key"
+            ]
+          },
+          "Total": {
+            "Nodes": 1,
+            "Partial": 1,
+            "Supported": 1,
+            "Tests": 1,
+            "Unsupported": 1
+          },
+          "Warnings": [
+            {
+              "Category": "Category",
+              "Description": "example text",
+              "Keywords": "Keywords",
+              "NotesByNumber": {
+                "key": "key"
+              },
+              "Results": [
+                {
+                  "Family": "Family",
+                  "Name": "Example Name",
+                  "NoteNumber": "NoteNumber",
+                  "Platform": "Platform",
+                  "Support": "Support",
+                  "Version": "Version"
+                }
+              ],
+              "Score": {
+                "Found": 1,
+                "Partial": 1,
+                "Supported": 1,
+                "Unsupported": 1
+              },
+              "Slug": "Slug",
+              "Tags": [
+                "Tags"
+              ],
+              "Title": "Title",
+              "URL": "https://example.com"
+            }
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "LinkCheckParams:link_check_params",
+      "operationId": "LinkCheckParams",
+      "methodName": "link_check_params",
+      "namespace": [
+        "other"
+      ],
+      "mode": "normal",
+      "owner": "other",
+      "arguments": {
+        "id": "id-1",
+        "follow": "false"
+      },
+      "argumentOrder": [
+        "id",
+        "follow"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Errors": 1,
+          "Links": [
+            {
+              "Status": "active",
+              "StatusCode": 200,
+              "URL": "https://example.com"
+            }
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "ReleaseMessageParams:release_message_params",
+      "operationId": "ReleaseMessageParams",
+      "methodName": "release_message_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1",
+        "to": [
+          "user1@example.com",
+          "user2@example.com"
+        ]
+      },
+      "argumentOrder": [
+        "id",
+        "to"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "RenameTagParams:rename_tag_params",
+      "operationId": "RenameTagParams",
+      "methodName": "rename_tag_params",
+      "namespace": [
+        "tags"
+      ],
+      "mode": "normal",
+      "owner": "tags",
+      "arguments": {
+        "tag": "Tag",
+        "name": "New name"
+      },
+      "argumentOrder": [
+        "tag",
+        "name"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "SearchParams:search_params",
+      "operationId": "SearchParams",
+      "methodName": "search_params",
+      "namespace": [
+        "messages"
+      ],
+      "mode": "normal",
+      "owner": "messages",
+      "arguments": {
+        "query": "query",
+        "start": "0",
+        "limit": "50",
+        "tz": "tz"
+      },
+      "argumentOrder": [
+        "query",
+        "start",
+        "limit",
+        "tz"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "messages": [
+            {
+              "Attachments": 1,
+              "Bcc": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Cc": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Created": "2024-01-01T00:00:00Z",
+              "From": {
+                "Address": "Address",
+                "Name": "Example Name"
+              },
+              "ID": "id-1",
+              "MessageID": "Message-1",
+              "Read": false,
+              "ReplyTo": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Size": 1,
+              "Snippet": "Snippet",
+              "Subject": "Subject",
+              "Tags": [
+                "Tags"
+              ],
+              "To": [
+                {
+                  "Address": "Address",
+                  "Name": "Example Name"
+                }
+              ],
+              "Username": "Example Name"
+            }
+          ],
+          "messages_count": 30,
+          "messages_unread": 30,
+          "start": 1,
+          "tags": [
+            "tags"
+          ],
+          "total": 100,
+          "unread": 1
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "SendMessageParams:send_message_params",
+      "operationId": "SendMessageParams",
+      "methodName": "send_message_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "from_": {
+          "Email": "john@example.com",
+          "Name": "John Doe"
+        },
+        "attachments": [
+          {
+            "Content": "iVBORw0KGgoAAAANSUhEUgAAAEEAAAA8CAMAAAAOlSdoAAAACXBIWXMAAAHrAAAB6wGM2bZBAAAAS1BMVEVHcEwRfnUkZ2gAt4UsSF8At4UtSV4At4YsSV4At4YsSV8At4YsSV4At4YsSV4sSV4At4YsSV4At4YtSV4At4YsSV4At4YtSV8At4YsUWYNAAAAGHRSTlMAAwoXGiktRE5dbnd7kpOlr7zJ0d3h8PD8PCSRAAACWUlEQVR42pXT4ZaqIBSG4W9rhqQYocG+/ys9Y0Z0Br+x3j8zaxUPewFh65K+7yrIMeIY4MT3wPfEJCidKXEMnLaVkxDiELiMz4WEOAZSFghxBIypCOlKiAMgXfIqTnBgSm8CIQ6BImxEUxEckClVQiHGj4Ba4AQHikAIClwTE9KtIghAhUJwoLkmLnCiAHJLRKgIMsEtVUKbBUIwoAg2C4QgQBE6l4VCnApBgSKYLLApCnCa0+96AEMW2BQcmC+Pr3nfp7o5Exy49gIADcIqUELGfeA+bp93LmAJp8QJoEcN3C7NY3sbVANixMyI0nku20/n5/ZRf3KI2k6JEDWQtxcbdGuAqu3TAXG+/799Oyyas1B1MnMiA+XyxHp9q0PUKGPiRAau1fZbLRZV09wZcT8/gHk8QQAxXn8VgaDqcUmU6O/r28nbVwXAqca2mRNtPAF5+zoP2MeN9Fy4NgC6RfcbgE7XITBRYTtOE3U3C2DVff7pk+PkUxgAbvtnPXJaD6DxulMLwOhPS/M3MQkgg1ZFrIXnmfaZoOfpKiFgzeZD/WuKqQEGrfJYkyWf6vlG3xUgTuscnkNkQsb599q124kdpMUjCa/XARHs1gZymVtGt3wLkiFv8rUgTxitYCex5EVGec0Y9VmoDTFBSQte2TfXGXlf7hbdaUM9Sk7fisEN9qfBBTK+FZcvM9fQSdkl2vj4W2oX/bRogO3XasiNH7R0eW7fgRM834ImTg+Lg6BEnx4vz81rhr+MYPBBQg1v8GndEOrthxaCTxNAOut8WKLGZQl+MPz88Q9tAO/hVuSeqQAAAABJRU5ErkJggg==",
+            "ContentID": "mailpit-logo",
+            "ContentType": "image/png",
+            "Filename": "mailpit.png"
+          }
+        ],
+        "bcc": [
+          "jack@example.com"
+        ],
+        "cc": [
+          {
+            "Email": "manager@example.com",
+            "Name": "Manager"
+          }
+        ],
+        "html": "<div style=\"text-align:center\"><p style=\"font-family: arial; font-size: 24px;\">Mailpit is <b>awesome</b>!</p><p><img src=\"cid:mailpit-logo\" /></p></div>",
+        "headers": {
+          "X-IP": "1.2.3.4"
+        },
+        "reply_to": [
+          {
+            "Email": "secretary@example.com",
+            "Name": "Secretary"
+          }
+        ],
+        "subject": "Mailpit message via the HTTP API",
+        "tags": [
+          "Tag 1",
+          "Tag 2"
+        ],
+        "text": "Mailpit is awesome!",
+        "to": [
+          {
+            "Email": "jane@example.com",
+            "Name": "Jane Doe"
+          }
+        ]
+      },
+      "argumentOrder": [
+        "from_",
+        "attachments",
+        "bcc",
+        "cc",
+        "html",
+        "headers",
+        "reply_to",
+        "subject",
+        "tags",
+        "text",
+        "to"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "ID": "iAfZVVe2UQfNSG5BAjgYwa"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "setChaosParams:set_chaos_params",
+      "operationId": "setChaosParams",
+      "methodName": "set_chaos_params",
+      "namespace": [
+        "testing"
+      ],
+      "mode": "normal",
+      "owner": "testing",
+      "arguments": {
+        "authentication": {
+          "ErrorCode": 451,
+          "Probability": 5
+        },
+        "recipient": {
+          "ErrorCode": 451,
+          "Probability": 5
+        },
+        "sender": {
+          "ErrorCode": 451,
+          "Probability": 5
+        }
+      },
+      "argumentOrder": [
+        "authentication",
+        "recipient",
+        "sender"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Authentication": {
+            "ErrorCode": 451,
+            "Probability": 5
+          },
+          "Recipient": {
+            "ErrorCode": 451,
+            "Probability": 5
+          },
+          "Sender": {
+            "ErrorCode": 451,
+            "Probability": 5
+          }
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "SetReadStatusParams:set_read_status_params",
+      "operationId": "SetReadStatusParams",
+      "methodName": "set_read_status_params",
+      "namespace": [
+        "messages"
+      ],
+      "mode": "normal",
+      "owner": "messages",
+      "arguments": {
+        "tz": "tz",
+        "ids": [
+          "4oRBnPtCXgAqZniRhzLNmS",
+          "hXayS6wnCgNnt6aFTvmOF6"
+        ],
+        "read": true,
+        "search": "tag:backups"
+      },
+      "argumentOrder": [
+        "tz",
+        "ids",
+        "read",
+        "search"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "SetTagsParams:set_tags_params",
+      "operationId": "SetTagsParams",
+      "methodName": "set_tags_params",
+      "namespace": [
+        "tags"
+      ],
+      "mode": "normal",
+      "owner": "tags",
+      "arguments": {
+        "ids": [
+          "4oRBnPtCXgAqZniRhzLNmS",
+          "hXayS6wnCgNnt6aFTvmOF6"
+        ],
+        "tags": [
+          "Tag 1",
+          "Tag 2"
+        ]
+      },
+      "argumentOrder": [
+        "ids",
+        "tags"
+      ],
+      "response": {
+        "kind": "text",
+        "expected": "string",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "SpamAssassinCheckParams:spam_assassin_check_params",
+      "operationId": "SpamAssassinCheckParams",
+      "methodName": "spam_assassin_check_params",
+      "namespace": [
+        "other"
+      ],
+      "mode": "normal",
+      "owner": "other",
+      "arguments": {
+        "id": "id-1"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "Error": "Error",
+          "IsSpam": false,
+          "Rules": [
+            {
+              "Description": "example text",
+              "Name": "Example Name",
+              "Score": 1
+            }
+          ],
+          "Score": 1
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "ThumbnailParams:thumbnail_params",
+      "operationId": "ThumbnailParams",
+      "methodName": "thumbnail_params",
+      "namespace": [
+        "message"
+      ],
+      "mode": "normal",
+      "owner": "message",
+      "arguments": {
+        "id": "id-1",
+        "part_id": "Part-1"
+      },
+      "argumentOrder": [
+        "id",
+        "part_id"
+      ],
+      "response": {
+        "kind": "bytes",
+        "expected": null,
+        "byteLength": 12
+      }
+    },
+    {
+      "id": "WebUIConfigurationResponse:web_ui_configuration_response",
+      "operationId": "WebUIConfigurationResponse",
+      "methodName": "web_ui_configuration_response",
+      "namespace": [
+        "application"
+      ],
+      "mode": "normal",
+      "owner": "application",
+      "arguments": {},
+      "argumentOrder": [],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "ChaosEnabled": false,
+          "DuplicatesIgnored": false,
+          "HideDeleteAllButton": false,
+          "Label": "Label",
+          "MessageRelay": {
+            "AllowedRecipients": "AllowedRecipients",
+            "BlockedRecipients": "BlockedRecipients",
+            "Enabled": false,
+            "OverrideFrom": "OverrideFrom",
+            "PreserveMessageIDs": false,
+            "ReturnPath": "ReturnPath",
+            "SMTPServer": "SMTPServer"
+          },
+          "SpamAssassin": false
+        },
+        "byteLength": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+repo_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+cd "$repo_root"
+task_consumer=$(mktemp -d)
+trap 'rm -rf "$task_consumer"' EXIT HUP INT TERM
+python -m build --outdir "$task_consumer/dist"
+python -m venv "$task_consumer/venv"
+"$task_consumer/venv/bin/python" -m pip install "$task_consumer"/dist/*.whl
+cp examples/quickstart.py "$task_consumer/quickstart.py"
+cd "$task_consumer"
+"$task_consumer/venv/bin/python" quickstart.py
